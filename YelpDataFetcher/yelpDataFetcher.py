@@ -16,7 +16,7 @@ def fetch_data(cuisine, total_records=1000):
         records = []
         for count in range(0, total_records, API_PER_REQUEST_LIMIT_COUNT):
             params = {
-                "location": "New York",
+                "location": "New York City",
                 "term": cuisine,
                 "categories": "Restaurants",
                 "limit": API_PER_REQUEST_LIMIT_COUNT,
