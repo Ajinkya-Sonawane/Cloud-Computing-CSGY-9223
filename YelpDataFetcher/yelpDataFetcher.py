@@ -1,8 +1,6 @@
 import requests
 from decouple import config
 import json
-import os
-
 
 API_KEY = config("API_KEY")
 API_URL_ENDPOINT = config("API_URL_ENDPOINT")
