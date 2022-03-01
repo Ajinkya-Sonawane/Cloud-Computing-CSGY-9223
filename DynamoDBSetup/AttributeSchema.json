@@ -1,0 +1,10 @@
+[
+    {
+        "AttributeName": "restaurant_id",
+        "AttributeType": "S"
+    },
+    {
+        "AttributeName": "name",
+        "AttributeType": "S"
+    }
+]

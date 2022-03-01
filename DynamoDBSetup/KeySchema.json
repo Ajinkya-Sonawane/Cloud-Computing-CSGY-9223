@@ -1,0 +1,10 @@
+[
+    {
+        "AttributeName": "restaurant_id",
+        "KeyType": "HASH"
+    },
+    {
+        "AttributeName": "name",
+        "KeyType": "RANGE"
+    }
+]
