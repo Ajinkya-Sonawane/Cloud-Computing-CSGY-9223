@@ -13,6 +13,7 @@ HEADERS = {
 
 def fetch_data(cuisine, total_records=1000):
     with open(cuisine+'.json', 'w') as writer:
+        records = []
         for count in range(0, total_records, API_PER_REQUEST_LIMIT_COUNT):
             params = {
                 "location": "New York",
@@ -23,9 +24,9 @@ def fetch_data(cuisine, total_records=1000):
             }
             response = requests.get(API_URL_ENDPOINT, params=params, headers=HEADERS).json()
             for record in response['businesses']:
-                json.dump(record,writer)
-                writer.write('\n')
-            print ("%d %s cuisine records fetched" % (count, cuisine))
+                records.append(record)
+            print ("%d %s cuisine records fetched" % (count+API_PER_REQUEST_LIMIT_COUNT, cuisine))
+        json.dump(records, writer)
 
 
 if __name__ == "__main__":
