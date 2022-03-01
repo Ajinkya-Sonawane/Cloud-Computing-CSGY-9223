@@ -1,3 +1,3 @@
 ### Requirements
-- `pip install pyaml`
+- `pip install PyYAML`
 
