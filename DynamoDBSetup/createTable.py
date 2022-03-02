@@ -1,8 +1,12 @@
 import boto3
 import json
 
-KEY_SCHEMA = json.load(open('KeySchema.json'))
-ATTRIBUTE_DEFINITIONS = json.load(open('AttributeSchema.json'))
+KEY_SCHEMA = [{
+        "AttributeName": "restaurant_id",
+        "KeyType": "HASH"}]
+ATTRIBUTE_DEFINITIONS = [{
+        "AttributeName": "restaurant_id",
+        "AttributeType": "S"}]
 PROVISIONED_THROUGHPUT = {
     'ReadCapacityUnits': 5,
     'WriteCapacityUnits': 5
