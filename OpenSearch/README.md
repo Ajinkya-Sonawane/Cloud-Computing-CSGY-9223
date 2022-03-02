@@ -1,4 +1,15 @@
-### Create Domain
+### Create Domain (Elastic Search 7.10)
+- Create domain 
+- Provide Domain Name
+- Deployment type - Development & Testing
+- Version - Choose 7.10
+- Data Nodes - Instance Type: `t3.small.search`
+- Network - Public Access
+- Fine-grained access policy: `Create master user`
+- Access Policy: `Only use fine-grained access control`
+- Create
+
+### Create Domain (Open Search)
 - Create domain 
 - Provide Domain Name
 - Deployment type - Development & Testing
@@ -22,11 +33,14 @@
   ]
 }`
 
-### Requirements 
-- pip install opensearch-py
-- pip install requests_aws4auth
-- pip install pyyaml
-- pip install boto3
+### Requirements (Open Search)
+- `pip install requests`
+- `pip install opensearch-py`
+- `pip install requests_aws4auth`
+- `pip install pyyaml`
+- `pip install boto3`
 
 ### .ENV
 - Store the domain name without the "https://" in OPEN_SEARCH_HOST key
+- Store auth credentials required for requests
+- Store the host domain url of Elastic Search
