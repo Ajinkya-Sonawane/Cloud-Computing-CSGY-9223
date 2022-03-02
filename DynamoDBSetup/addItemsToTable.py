@@ -1,7 +1,4 @@
-import decimal
-
 import boto3
-import json
 import time
 import yaml
 
