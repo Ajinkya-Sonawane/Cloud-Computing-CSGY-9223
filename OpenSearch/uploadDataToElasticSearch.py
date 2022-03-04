@@ -8,10 +8,10 @@ PATH = "../YelpDataFetcher/"
 CUISINES_LIST = ['Indian', 'Mexican', 'Chinese', 'Korean', 'Japanese']
 AUTH_CREDS = (config("AUTH_USERNAME"),config("AUTH_PWD"))
 HOST_URL = config("HOST_URL")
-index_name = 'restaurants'
-type_name = "restaurant"
-region = "us-east-1"
-service = "es"
+index_name = config("ES_INDEX_NAME")
+type_name = config("INDEX_TYPE")
+region = config("REGION")
+service = config("SERVICE")
 
 
 def create_index(index_name):

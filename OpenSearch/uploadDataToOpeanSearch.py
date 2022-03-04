@@ -7,9 +7,9 @@ import yaml
 
 PATH = "../YelpDataFetcher/"
 CUISINES_LIST = ['Indian', 'Mexican', 'Chinese', 'Korean', 'Japanese']
-index_name = 'restaurant-index'
-region = "us-east-1"
-service = "es"
+index_name = config("OS_INDEX_NAME")
+region = config("REGION")
+service = config("SERVICE")
 creds = boto3.Session().get_credentials()
 awsauth = AWS4Auth(creds.access_key, creds.secret_key, region, service, session_token=creds.token)
 host = config("OPEN_SEARCH_HOST")
