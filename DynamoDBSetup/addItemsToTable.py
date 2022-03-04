@@ -1,8 +1,9 @@
+from decouple import config
 import boto3
 import time
 import yaml
 
-TABLE_NAME = "tbl_Restaurants"
+TABLE_NAME = config("RESTAURANTS_TABLE_NAME")
 CUISINES_LIST = ['Indian', 'Mexican', 'Chinese', 'Korean', 'Japanese']
 PATH_TO_FILE = "../YelpDataFetcher/"
 dynamodb = boto3.resource('dynamodb')
